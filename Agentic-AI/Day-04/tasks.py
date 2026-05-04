@@ -2,7 +2,6 @@ from crewai import Task
 from agents import senior_researcher, script_writer, reviewer
 
 
-# 🔹 Research Task
 research_task = Task(
     description="""
     Gather accurate and up-to-date information about {topic} using available tools.
@@ -25,7 +24,6 @@ research_task = Task(
 )
 
 
-# 🔹 Script Writing Task
 script_task = Task(
     description="""
     Create an engaging YouTube script about {topic}.
@@ -51,7 +49,6 @@ script_task = Task(
 )
 
 
-# 🔹 Review Task (LOOP SAFE)
 review_task = Task(
     description="""
     Review the YouTube script ONCE.
@@ -77,7 +74,6 @@ review_task = Task(
 )
 
 
-# 🔹 Rewrite Task (FINAL STEP)
 rewrite_task = Task(
     description="""
     Improve the YouTube script using the review feedback.
